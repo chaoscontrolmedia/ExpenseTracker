@@ -1,0 +1,200 @@
+
+
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #3d3f52;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  margin: 0;
+  font-family:  'Titillium Web', sans-serif;
+  
+}
+
+.container {
+  margin: 20px auto;
+  width: 1500px;
+  
+}
+
+
+h1 {
+  border-bottom: 1px solid #bbb;
+  letter-spacing: 1px;
+  margin: 0;
+  font-size:2.5em;
+}
+h2.balance{
+  font-size:2.em;
+  margin-top:0.2em;
+}
+
+h2.number{
+  font-size:4em;
+}
+
+
+h2{
+  font-size:2em;
+}
+
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 0px 0 10px;
+}
+
+
+h4 {
+  margin: 0;
+
+  font-size:1.5em;
+}
+.incomeexpenses{
+  color:black;
+  margin:5%
+}
+.inc-exp-container {
+  background-color: rgb(245, 249, 252);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  color:black;
+}
+
+.inc-exp-container-history {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  color:black;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.money {
+  font-size: 2em;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: #2ecc71;
+  margin-left:5%;
+}
+
+.money.minus {
+  color: #c0392b;
+  margin-left:5%;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input[type='text'],
+input[type='number'] {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #9c88ff;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 5px solid #c0392b;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+
+
+
+@media (max-width: 320px) {
+  .container {
+    width: 300px;
+  }
+}
